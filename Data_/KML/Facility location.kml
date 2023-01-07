@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Facility location</name>
+    <description/>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FF5252-labelson">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1899-FFEA00-labelson">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>facilities</name>
+      <Placemark>
+        <name>Point 1</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7586461,45.645215,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 2</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7621222,45.6425447,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 3</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7651263,45.6414946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 4</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7661992,45.6447349,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 5</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7646971,45.6463701,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 6</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.764504,45.6489651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 7</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7685381,45.6473451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 8</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7723361,45.64529,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 9</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7721859,45.6428748,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 10</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7775074,45.6444049,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 11</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7748037,45.6472251,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 12</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7725721,45.6492951,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 13</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7689243,45.6513051,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 14</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7616931,45.6470901,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 15</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7768422,45.6496101,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 16</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7749539,45.6398143,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 17</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7724863,45.65276,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 18</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7797819,45.6417046,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 19</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7567149,45.6426347,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 20</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7764989,45.65264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 21</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.78049,45.6507201,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 22</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7839876,45.6514101,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 23</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7853609,45.6497001,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 24</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7808762,45.6485451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 25</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7823997,45.6465351,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 26</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7850176,45.6473601,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 27</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.787099,45.6481701,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 28</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7802325,45.6441049,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 29</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7824856,45.6428898,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 30</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7686668,45.6401894,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 31</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7834297,45.64487,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 32</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7859402,45.644915,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 33</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7887941,45.64583,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 34</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7820135,45.6535099,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 35</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7606631,45.6413746,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 36</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7694178,45.6439699,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 37</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7746535,45.652235,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 38</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7671862,45.6494601,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 39</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.776692,45.6420497,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 40</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7782798,45.6465501,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 41</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7837945,45.6394993,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 42</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7895237,45.6509301,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 43</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7881504,45.6424847,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 44</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7892876,45.6397543,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 45</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.7538825,45.6473451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>street nodes</name>
+      <Placemark>
+        <name>Point 1</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.756908,45.6445249,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 2</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7630449,45.6479451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 3</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.759719,45.6443899,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 4</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7564574,45.6421697,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 5</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7626157,45.6408045,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 6</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7635813,45.6421847,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 7</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7641392,45.6429048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 8</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7664138,45.6431148,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 9</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7669073,45.6438799,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 10</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7673579,45.6408195,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 11</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7708555,45.6425597,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 12</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.772143,45.6392292,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 13</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.772143,45.6414646,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 14</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.774675,45.6405195,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 15</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.778473,45.6431448,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 16</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7727652,45.64577,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 17</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7801038,45.6414646,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 18</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.781005,45.6419147,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 19</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7844382,45.6399644,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 20</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7815843,45.6447499,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 21</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7904034,45.6416596,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 22</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.788322,45.64496,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 23</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7860046,45.6434298,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 24</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7949095,45.6399044,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 25</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7906609,45.6498351,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 26</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7833439,45.6489501,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 27</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7770568,45.6515001,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 28</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.77946,45.65234,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 29</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.777722,45.6501951,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 30</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7805973,45.6549948,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 31</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7796853,45.6473826,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 32</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7813376,45.6478176,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 33</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7683771,45.6484926,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 34</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7663172,45.6478476,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 35</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7654589,45.6483426,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 36</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7700294,45.6534275,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 37</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7735484,45.6524675,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 38</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7741063,45.6537424,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 39</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.772261,45.6501426,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 40</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7739561,45.6496626,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 41</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7738703,45.6493026,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 42</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7761663,45.6486726,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 43</name>
+        <description>street</description>
+        <styleUrl>#icon-1899-FFEA00-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.776475,45.6456224,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>bb box</name>
+      <Placemark>
+        <name>Punto 1</name>
+        <description>bb box</description>
+        <styleUrl>#icon-1899-FF5252-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7505351,45.657207,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Punto 2</name>
+        <description>bb box</description>
+        <styleUrl>#icon-1899-FF5252-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            13.7992011,45.6388166,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
