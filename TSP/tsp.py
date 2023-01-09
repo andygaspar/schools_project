@@ -15,14 +15,14 @@ class Tsp:
 
     def __init__(self):
 
-        friuli = pd.read_csv('../Data_/CSV/friuli.csv', low_memory=False)
+        friuli = pd.read_csv('Data_/CSV/friuli.csv', low_memory=False)
         self.friuli = gpd.GeoDataFrame(
             friuli.loc[:, [c for c in friuli.columns if c != "geometry"]],
             geometry=gpd.GeoSeries.from_wkt(friuli["geometry"]),
             crs="epsg:3005",
         )
-        cities = pd.read_csv('../Data_/CSV/FriuliCitta.csv', low_memory=False)
-        self.cities_to_consider = pd.read_csv('../Data_/CSV/citta.csv', low_memory=False)
+        cities = pd.read_csv('Data_/CSV/FriuliCitta.csv', low_memory=False)
+        self.cities_to_consider = pd.read_csv('Data_/CSV/citta.csv', low_memory=False)
         self.cities_to_consider.name = [str(i) + '\n' + name for i, name in enumerate(self.cities_to_consider.name)]
         cities = cities[cities.name.isin(self.cities_to_consider.city)]
         self.cities = gpd.GeoDataFrame(
@@ -40,7 +40,7 @@ class Tsp:
 
         self.positions = dict(zip(self.g.nodes, zip(points_x, points_y)))
 
-        df_edges = pd.read_csv('../Data_/CSV/tsp_edges.csv')
+        df_edges = pd.read_csv('Data_/CSV/tsp_edges.csv')
         self.edges = tuple(zip(df_edges.edge_1, df_edges.edge_2))
 
         edges = list(tuple(zip(df_edges.edge_1, df_edges.edge_2,
@@ -55,15 +55,18 @@ class Tsp:
             self.labels[key] = np.round(self.labels[key] / 1000, decimals=1)
         self.edge_color = 'black'
 
-    def draw(self):
-        fig, ax = plt.subplots(figsize=(40, 40))
-
+    def draw(self, name_file=None):
+        fig, ax = plt.subplots(figsize=(40, 28))
+        ax.patch.set_alpha(1.)
         self.friuli.plot(ax=ax)
 
         nx.draw(self.g, ax=ax, pos=self.positions, node_color='r', edge_color=self.edge_color, node_size=100, width=5)
         for x, y, label in zip(self.cities.geometry.x, self.cities.geometry.y, self.cities_to_consider.name):
             ax.annotate(label, xy=(x, y + 0.01), xytext=(3, 3), textcoords="offset points", ha='center')
         nx.draw_networkx_edge_labels(self.g, edge_labels=self.labels, pos=self.positions, font_size=22)
+        plt.tight_layout()
+        if name_file is not None:
+            plt.savefig(name_file, transparent=True)
         plt.show()
 
     def solve(self):
@@ -107,9 +110,9 @@ class Tsp:
         print(self.g.edges)
         print(self.solution)
 
-    def draw_solution(self, solution=None):
+    def draw_solution(self, solution=None, name_file=None):
         solution = solution if solution is not None else self.solution
 
         self.edge_color = ['lime' if (edge in solution or edge[::-1] in solution) else 'black' for edge in self.g.edges]
-        self.draw()
+        self.draw(name_file)
         self.edge_color = 'black'

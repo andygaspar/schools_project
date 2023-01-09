@@ -12,8 +12,8 @@ class GraphObj:
 
     def __init__(self):
 
-        self.kml_file = '../Data_/KML/Facility location.kml'
-        self.edge_file = '../Data_/CSV/fl_edges.csv'
+        self.kml_file = 'Data_/KML/Facility location.kml'
+        self.edge_file = 'Data_/CSV/fl_edges.csv'
         self.g = nx.Graph()
         self.df = self.read_file(self.kml_file)
         self.limits = {
@@ -103,10 +103,10 @@ class GraphObj:
         if show:
             plt.show()
 
-    def draw_all(self):
+    def draw_all(self, name_file=None):
         plt.rcParams['font.size'] = 22
 
-        df_streets = pd.read_csv('../Data_/CSV/streets.csv', low_memory=False)
+        df_streets = pd.read_csv('Data_/CSV/streets.csv', low_memory=False)
         cp_union = gpd.GeoDataFrame(
             df_streets.loc[:, [c for c in df_streets.columns if c != "geometry"]],
             geometry=gpd.GeoSeries.from_wkt(df_streets["geometry"]),
@@ -123,7 +123,9 @@ class GraphObj:
 
         df.plot(ax=ax, color='grey', figsize=(60, 25))
         self.draw(ax)
-
+        plt.tight_layout()
+        if name_file is not None:
+            plt.savefig(name_file)
         plt.show()
 
     def draw_solution(self, sol, not_covered=None):

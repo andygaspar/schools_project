@@ -2,7 +2,7 @@ import networkx as nx
 import numpy as np
 import gurobipy as gb
 
-from fl_graph import GraphObj
+from FL.fl_graph import GraphObj
 
 
 class FacilityLocation:
@@ -42,8 +42,8 @@ class FacilityLocation:
         streets = np.squeeze(np.argwhere(sol_y == 1)) + self.g.n_facilities
         self.solution = np.concatenate([facilities, streets])
 
-    def draw(self):
-        self.g.draw_all()
+    def draw(self, name_file=None):
+        self.g.draw_all(name_file)
 
     def draw_solution(self, solution=None, not_covered=None):
         solution = solution if solution is not None else self.solution
