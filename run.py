@@ -5,7 +5,7 @@ from TSP.tsp import Tsp
 # FL
 
 f = FacilityLocation()
-f.draw()
+f.draw('fl.png')
 sol = [4, 6, 9, 70, 12, 30, 40]
 f.check_solution()
 

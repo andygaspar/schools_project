@@ -31,7 +31,7 @@ class GraphObj:
         self.n_facilities, self.n_streets = self.df[self.df.layer == 'facilities'].shape[0], \
             self.df[self.df.layer == 'street nodes'].shape[0]
         self.colors = self.reset_colors()
-        self.sizes = [800 for _ in range(self.n_facilities)] + [600 for _ in range(self.n_streets)]
+        self.sizes = [1100 for _ in range(self.n_facilities)] + [900 for _ in range(self.n_streets)]
 
         offset = 0.0000
         pos_labels = {}
@@ -50,7 +50,7 @@ class GraphObj:
         self.g.add_weighted_edges_from(edges)
 
     def reset_colors(self):
-        return np.array(["dodgerblue" for _ in range(self.n_facilities)] + ["yellow" for _ in range(self.n_streets)])
+        return np.array(["lightskyblue" for _ in range(self.n_facilities)] + ["yellow" for _ in range(self.n_streets)])
 
     def read_file(self, klm_file):
         points_layer = []
@@ -99,7 +99,7 @@ class GraphObj:
 
     def draw(self, ax=None, show=False):
         nx.draw(self.g, ax=ax, pos=self.positions, node_size=self.sizes, node_color=self.colors, width=5,
-                edge_color='r', font_size=22, with_labels=True)
+                edge_color='r', font_size=25, font_weight='bold', with_labels=True)
         if show:
             plt.show()
 
