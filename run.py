@@ -14,5 +14,5 @@ f.check_solution()
 
 tsp = Tsp()
 tsp.draw()
-tsp.solve()
+# tsp.solve()
 tsp.draw_solution()

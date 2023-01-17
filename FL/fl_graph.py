@@ -6,6 +6,8 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt, image as mpimg
 import geopy.distance as geo_dist
+from matplotlib_scalebar.scalebar import ScaleBar
+from shapely.geometry.point import Point
 
 
 class GraphObj:
@@ -103,44 +105,50 @@ class GraphObj:
         if show:
             plt.show()
 
-    def draw_all(self, name_file=None):
+    def draw_all(self, team=None, obj_val=None, n_uncovered=None, name_file=None):
         plt.rcParams['font.size'] = 22
 
         df_streets = pd.read_csv('Data_/CSV/streets.csv', low_memory=False)
         cp_union = gpd.GeoDataFrame(
             df_streets.loc[:, [c for c in df_streets.columns if c != "geometry"]],
             geometry=gpd.GeoSeries.from_wkt(df_streets["geometry"]),
-            crs="epsg:3005",
+            crs="epsg:32619",
         )
 
         df = cp_union.cx[self.limits['west']:self.limits['est'], self.limits['south']:self.limits['north']]
-
+        # df.to_crs(3005)
         fig, ax = plt.subplots(figsize=(60, 25))
+
         ax.set_xlim((self.limits['west'], self.limits['est']))
         ax.set_ylim((self.limits['south'], self.limits['north']))
         ax.margins(0)
         ax.apply_aspect()
 
         df.plot(ax=ax, color='grey', figsize=(60, 25))
+
+        points = gpd.GeoSeries([Point(-73.5, 40.5), Point(-74.5, 40.5)], crs=4326)  # Geographic WGS 84 - degrees
+        points = points.to_crs(32619)
+        distance_meters = points[0].distance(points[1])
+        fig.gca().add_artist(ScaleBar(dx=distance_meters, units="m", fixed_value=500, border_pad=3))
+
         self.draw(ax)
         plt.tight_layout()
+
+        if team is not None:
+            feasibility = ',   soluzione ammissibile' if n_uncovered == 0 else ',   soluzione inammissibile, ' \
+                                                                              + str(n_uncovered) + ' zone scoperte'
+            plt.title(team + '  Numero piazzole totale: ' + str(obj_val) + feasibility, fontsize=60)
+
         if name_file is not None:
             plt.savefig(name_file)
         plt.show()
 
-    def draw_solution(self, sol, not_covered=None):
+    def draw_solution(self, sol, not_covered=None, team=None, obj_val=None, n_uncovered=None, name_file=None):
         self.colors[sol] = 'lime'
         if not_covered is not None:
             self.colors[not_covered] = 'orange'
-        self.draw_all()
+        self.draw_all(team, obj_val, n_uncovered, name_file)
         self.colors = self.reset_colors()
 
-
-class Point:
-
-    def __init__(self, name, description, coordinates):
-        self.name = name
-        self.description = description
-        self.coordinates = coordinates
 
 
