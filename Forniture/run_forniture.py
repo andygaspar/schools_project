@@ -6,4 +6,6 @@ print('Optimal Solution configuration')
 p_solver.get_solution()
 
 
-#print(evaluate_csv(csv_file_name))
+csv_file_name='Forniture/sol_template.csv'
+
+print('quantità avanzata', p_solver.evaluate_csv(csv_file_name))
