@@ -47,19 +47,20 @@ class FacilityLocation:
     def draw(self, name_file=None):
         self.g.draw_all(name_file)
 
-    def draw_solution(self, solution=None, not_covered=None, team=None, obj_val=None, n_uncovered=None):
+    def draw_solution(self, solution=None, not_covered=None, team=None, obj_val=None, n_uncovered=None, name_file=None):
         solution = solution if solution is not None else self.solution
-        self.g.draw_solution(solution, not_covered, team, obj_val, n_uncovered)
+        self.g.draw_solution(solution, not_covered, team, obj_val, n_uncovered, name_file=name_file)
 
-    def check_and_draw_solution(self, solution=None, team=None):
+    def check_and_draw_solution(self, solution=None, team=None, name_file=None):
         sol = np.zeros(self.g.n_points)
         solution = solution if solution is not None else self.solution
+        obj_val = len(solution) if solution is not None else self.obj_val
         team = team if team is not None else 'Soluzione ottima'
         sol[solution] = 1
         res = np.where(np.dot(self.mat, sol)[: self.g.n_facilities] == 0)
         print('facilities:', len(solution), 'uncovered:', res)
         n_uncovered = len(res[0])
-        self.draw_solution(solution, res, team, self.obj_val, n_uncovered)
+        self.draw_solution(solution, res, team, obj_val, n_uncovered, name_file=name_file)
 
     def draw_csv_solutions(self):
         df = pd.read_csv('FL/solutions.csv')
@@ -68,7 +69,7 @@ class FacilityLocation:
         for team in df.columns:
             df[team] = df[team].astype(int)
             sol = df[team][df[team] < 1000][1:-1].to_numpy()
-            self.check_and_draw_solution(sol, team)
+            self.check_and_draw_solution(sol, team, name_file=team+'.png')
 
 
 
