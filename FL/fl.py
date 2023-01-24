@@ -67,7 +67,7 @@ class FacilityLocation:
 
         for team in df.columns:
             df[team] = df[team].astype(int)
-            sol = df[team][df[team] < 1000][1:-1].to_numpy()
+            sol = df[team][df[team] < 1000].to_numpy()
             self.check_and_draw_solution(sol, team)
 
 
