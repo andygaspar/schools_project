@@ -143,7 +143,8 @@ class GraphObj:
 
         if name_file is not None:
             plt.savefig(name_file)
-        plt.show()
+        else:
+            plt.show()
 
     def draw_solution(self, sol, not_covered=None, team=None, obj_val=None, n_uncovered=None, name_file=None):
         self.colors[sol] = 'lime'

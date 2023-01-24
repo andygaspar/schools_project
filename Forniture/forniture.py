@@ -71,17 +71,17 @@ class PaniniSolver:
     def get_obj_val(self):
         return sum(q_vals) - self.__m.ObjVal
 
+    @staticmethod
+    def evaluate_csv(csv_file):
+        df = pd.read_csv(csv_file)
+        df.fillna(0, inplace=True)
+        acc = 0
+        for _, row in df.iterrows():
+            name = row[0]
+            vars = np.nonzero(row[1:].to_numpy())[0]
+            acc += sum(preferences[name, assets[a_i]] for a_i in vars)
 
-def evaluate_csv(csv_file):
-    df = pd.read_csv(csv_file)
-    df.fillna(0, inplace=True)
-    acc = 0
-    for _, row in df.iterrows():
-        name = row[0]
-        vars = np.nonzero(row[1:].to_numpy())[0]
-        acc += sum(preferences[name, assets[a_i]] for a_i in vars)
-
-    return sum(q_vals) - acc
+        return sum(q_vals) - acc
 
 
 # p_solver = PaniniSolver()
