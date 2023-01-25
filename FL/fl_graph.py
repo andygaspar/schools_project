@@ -118,20 +118,19 @@ class GraphObj:
 
         df = cp_union.cx[self.limits['west']:self.limits['est'], self.limits['south']:self.limits['north']]
 
-        # df.to_crs(3005)
-        fig, ax = plt.subplots(figsize=(60, 60))
+        df.to_crs(4326)
+        fig, ax = plt.subplots(figsize=(60, 40))
 
         ax.set_xlim((self.limits['west'], self.limits['est']))
         ax.set_ylim((self.limits['south'], self.limits['north']))
         ax.margins(0)
         ax.apply_aspect()
 
-        df.plot(ax=ax, color='grey', figsize=(60, 25))
+        ax = df.plot(ax=ax, color='grey')
 
         points = gpd.GeoSeries([Point(-73.5, 40.5), Point(-74.5, 40.5)], crs=4326)  # Geographic WGS 84 - degrees
-        points = points.to_crs(4326)
         distance_meters = points[0].distance(points[1])
-        fig.gca().add_artist(ScaleBar(dx=distance_meters, units="m", border_pad=3))
+        # ax.add_artist(ScaleBar(dx=1, units='m', border_pad=3))
 
         self.draw(ax)
         plt.tight_layout()
