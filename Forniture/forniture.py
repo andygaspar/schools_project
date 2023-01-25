@@ -10,7 +10,7 @@ assets = ['panino', 'pizza', 'tramezzino', 'hamburger', 'yogurt', 'pesca', 'bana
           'energy drink', 'caffe', 'ciambella', 'cioccolato', 'cornetto', 'gelato']
 categories = [assets[4 * i: 4 * (i + 1)] for i in range(4)]
 
-q_vals = np.array([4, 5, 3, 2, 3, 5, 6, 4, 9, 7, 2, 4, 5, 10, 5, 3])
+q_vals = np.array([4, 5, 3, 2, 3, 5, 4, 4, 9, 7, 2, 4, 5, 9, 6, 3])
 quantities = {a_i: q_i for a_i, q_i in zip(assets, q_vals)}
 
 preferences = {(u_i, a_i): 0 for u_i, a_i in itertools.product(users, assets)}

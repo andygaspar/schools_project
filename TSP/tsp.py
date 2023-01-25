@@ -122,7 +122,8 @@ class Tsp:
         plt.tight_layout()
         if name_file is not None:
             plt.savefig(name_file, transparent=True)
-        plt.show()
+        else:
+            plt.show()
 
     def draw_solution(self, team=None, solution=None, sol_val=None, name_file=None):
         solution = solution if solution is not None else self.solution
@@ -151,4 +152,5 @@ class Tsp:
                 edges = [(sol[i] - 1, sol[i+1] - 1) for i in range(sol_len - 1)]
                 obj = np.round(sum([self.mat_dist[edge]/1000 for edge in edges]) + self.ts_monfalcon_dist, decimals=1)
                 solution = [(sol[i], sol[i+1]) for i in range(sol_len - 1)]
-                self.draw_solution(team=team, sol_val=obj, solution=solution)
+                solution += [(0, 1)]
+                self.draw_solution(team=team, sol_val=obj, solution=solution, name_file=team + '.png')
