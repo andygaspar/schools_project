@@ -45,7 +45,7 @@ class FacilityLocation:
         self.obj_val = int(self.fl.getObjective().getValue())
 
     def draw(self, name_file=None):
-        self.g.draw_all(name_file)
+        self.g.draw_all(name_file=name_file)
 
     def draw_solution(self, solution=None, not_covered=None, team=None, obj_val=None, n_uncovered=None, name_file=None):
         solution = solution if solution is not None else self.solution

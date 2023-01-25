@@ -108,28 +108,29 @@ class GraphObj:
     def draw_all(self, team=None, obj_val=None, n_uncovered=None, name_file=None):
         plt.rcParams['font.size'] = 22
 
-        df_streets = pd.read_csv('Data_/CSV/streets.csv', low_memory=False)
+        df_streets = pd.read_csv('Data_/CSV/trieste.csv', low_memory=False)
         cp_union = gpd.GeoDataFrame(
             df_streets.loc[:, [c for c in df_streets.columns if c != "geometry"]],
             geometry=gpd.GeoSeries.from_wkt(df_streets["geometry"]),
-            crs="epsg:32619",
+            crs="epsg:4326",
         )
+        #  32619
 
         df = cp_union.cx[self.limits['west']:self.limits['est'], self.limits['south']:self.limits['north']]
-        # df.to_crs(3005)
-        fig, ax = plt.subplots(figsize=(60, 25))
+
+        df.to_crs(4326)
+        fig, ax = plt.subplots(figsize=(60, 40))
 
         ax.set_xlim((self.limits['west'], self.limits['est']))
         ax.set_ylim((self.limits['south'], self.limits['north']))
         ax.margins(0)
         ax.apply_aspect()
 
-        df.plot(ax=ax, color='grey', figsize=(60, 25))
+        ax = df.plot(ax=ax, color='grey')
 
         points = gpd.GeoSeries([Point(-73.5, 40.5), Point(-74.5, 40.5)], crs=4326)  # Geographic WGS 84 - degrees
-        points = points.to_crs(32619)
         distance_meters = points[0].distance(points[1])
-        fig.gca().add_artist(ScaleBar(dx=distance_meters, units="m", fixed_value=500, border_pad=3))
+        # ax.add_artist(ScaleBar(dx=1, units='m', border_pad=3))
 
         self.draw(ax)
         plt.tight_layout()
