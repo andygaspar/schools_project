@@ -1,8 +1,8 @@
 from Forniture.forniture import PaniniSolver
 
 p_solver = PaniniSolver()
-print('Optimal Solution value', p_solver.get_obj_val())
-print('Optimal Solution configuration')
+print('Unita\' minime rimaste', p_solver.get_obj_val())
+print('Assegnazione alle scuole: ')
 p_solver.get_solution()
 
 

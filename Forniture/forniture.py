@@ -64,9 +64,12 @@ class PaniniSolver:
         self.__m.optimize()
 
     def get_solution(self):
-        for x_i in self.__x:
-            if self.__x[x_i].getAttr('X') != 0:
-                print(x_i)
+        for u_i in users:
+            u_vals = []
+            for x_i in self.__x:
+                if x_i[0] == u_i and self.__x[x_i].getAttr('X') != 0:
+                    u_vals.append(x_i[1])
+            print(f'{u_i}: {u_vals}')
 
     def get_obj_val(self):
         return sum(q_vals) - self.__m.ObjVal
