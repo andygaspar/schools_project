@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt, image as mpimg
 import geopy.distance as geo_dist
-from matplotlib_scalebar.scalebar import ScaleBar
+# from matplotlib_scalebar.scalebar import ScaleBar
 from shapely.geometry.point import Point
 
 
@@ -148,7 +148,7 @@ class GraphObj:
     def draw_solution(self, sol, not_covered=None, team=None, obj_val=None, n_uncovered=None, name_file=None):
         self.colors[sol] = 'lime'
         if not_covered is not None:
-            self.colors[not_covered] = 'orange'
+            self.colors[not_covered] = 'red'
         self.draw_all(team, obj_val, n_uncovered, name_file)
         self.colors = self.reset_colors()
 

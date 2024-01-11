@@ -56,7 +56,7 @@ class Tsp:
             self.labels[key] = np.round(self.labels[key] / 1000, decimals=1)
         self.edge_color = 'grey'
 
-        self.mat_dist = nx.to_numpy_matrix(self.g)[1:, 1:]
+        self.mat_dist = nx.to_numpy_array(self.g)[1:, 1:]
         self.ts_monfalcon_dist = 31.8 * 2
 
     def solve(self):
@@ -94,7 +94,7 @@ class Tsp:
         sol = np.argwhere(x.x > 0.5) + 1
         self.solution = tuple(zip(sol[:, 0], sol[:, 1]))
         self.solution = ((0, 1),) + self.solution
-        self.obj_val = np.round(tsp.getObjective().getValue()/1000 + self.ts_monfalcon_dist, decimals=1)
+        self.obj_val = np.round(tsp.getObjective().getValue() / 1000 + self.ts_monfalcon_dist, decimals=1)
         print(self.obj_val)
         print(self.g.edges)
         print(self.solution)
@@ -113,7 +113,8 @@ class Tsp:
             x_eps = 0 if i != 16 else -0.01
             y_eps = -0.018 if i in [8, 10, 15] else 0.01
 
-            ax.annotate(label, xy=(x + x_eps, y + y_eps), xytext=(3, 3), textcoords="offset points", ha='center', fontsize=30)
+            ax.annotate(label, xy=(x + x_eps, y + y_eps), xytext=(3, 3), textcoords="offset points", ha='center',
+                        fontsize=30)
         nx.draw_networkx_edge_labels(self.g, edge_labels=self.labels, pos=self.positions, font_size=26)
 
         if team is not None:
@@ -149,8 +150,8 @@ class Tsp:
             if team not in unfeasible:
                 sol = df[team][df[team] < 1000][1:-1].to_numpy()
                 sol_len = sol.shape[0]
-                edges = [(sol[i] - 1, sol[i+1] - 1) for i in range(sol_len - 1)]
-                obj = np.round(sum([self.mat_dist[edge]/1000 for edge in edges]) + self.ts_monfalcon_dist, decimals=1)
-                solution = [(sol[i], sol[i+1]) for i in range(sol_len - 1)]
+                edges = [(sol[i] - 1, sol[i + 1] - 1) for i in range(sol_len - 1)]
+                obj = np.round(sum([self.mat_dist[edge] / 1000 for edge in edges]) + self.ts_monfalcon_dist, decimals=1)
+                solution = [(sol[i], sol[i + 1]) for i in range(sol_len - 1)]
                 solution += [(0, 1)]
-                self.draw_solution(team=team, sol_val=obj, solution=solution, name_file=team + '.png')
+                self.draw_solution(team=team, sol_val=obj, solution=solution, name_file='SoluzioniTSP/' + team + '.png')

@@ -1,6 +1,7 @@
 import networkx as nx
 import numpy as np
 import gurobipy as gb
+import scipy
 import pandas as pd
 
 from FL.fl_graph import GraphObj
@@ -69,7 +70,7 @@ class FacilityLocation:
         for team in df.columns:
             df[team] = df[team].astype(int)
             sol = df[team][df[team] < 1000].to_numpy()
-            self.check_and_draw_solution(sol, team, name_file=team+'.png')
+            self.check_and_draw_solution(sol, team, name_file='SoluzioniFL/'+ team+'.png')
 
 
 
